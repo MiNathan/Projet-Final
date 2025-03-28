@@ -1,0 +1,26 @@
+▪ Nom  du ou des concepteurs :
+  Nathan Théault
+
+▪ Nom du projet :
+  Dark Dungeon
+
+▪ Type de projet (jeu, simulation, application… ) :
+  RPG type Dungeon Crawler avec des notions de Roguelite
+
+▪ Description du projet :
+  Le joueur s'aventure dans un donjon afin de l'explorer, trouver de l'équipement et cherche un trésor
+
+▪ Les fonctionnalités (que pourra t-on faire?) : 
+  Se déplacer dans un donjon, se battre contre des ennemis
+  Trouver de l'équipement dans des coffres, ou des salles spéciales contenant des trésors plus rares
+  Se rendre dans une 'safe zone' pour stocker son équipement, se soigner et acheter des vivres...
+  Si possible, implémenter une génération semi aléatoire des salles, où chaque salle est créée à la main puis placée à l'aide d'un algorithme
+
+▪ L’interface utilisateur (comment va t-il interagir avec le logiciel ?) : 
+  Une interface graphique serait préférable, avec un HUD (Head's Up Display) pour afficher les points de vie, le sac à dos...
+  Les touches claviers pour se déplacer, se battre plus facilement avec un peu d'apprentissage / Ou bien à la souris en cliquant sur les objets ou ennemis pour une prise en main plus rapide
+
+▪ Technologies utilisés (langage/modules/bibliothèques/API)  avec description de leur usage : 
+  Python, language travaillé en Première et Terminale, forcément
+  Pillow, pour l'interface graphique interactive
+  Si besoin, d'autres bibliothèques mais ceci est peut probable
