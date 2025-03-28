@@ -21,6 +21,6 @@
   Les touches claviers pour se déplacer, se battre plus facilement avec un peu d'apprentissage / Ou bien à la souris en cliquant sur les objets ou ennemis pour une prise en main plus rapide
 
 ▪ Technologies utilisés (langage/modules/bibliothèques/API)  avec description de leur usage : 
-  Python, language travaillé en Première et Terminale, forcément
+  Python, langage travaillé en Première et Terminale, forcément
   Pillow, pour l'interface graphique interactive
   Si besoin, d'autres bibliothèques mais ceci est peut probable
