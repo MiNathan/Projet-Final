@@ -1,6 +1,6 @@
 import pyxel
 
-class HUD:
+class hud:
     def __init__(self):
         pyxel.init(256, 128, title ="Classe HUD", fps= 60)
         pyxel.load('hud.pyxres')
@@ -44,5 +44,3 @@ class HUD:
         self.draw_sta()
         self.contours()
         pyxel.rect(41, 1, 175, 126, 3)
-
-HUD()
