@@ -9,39 +9,36 @@ class Perso:
     """
     def __init__(self, nom):
         self.nom = nom  # Nom du perso
-        self.pv = 15    # Points de vie du perso
-        self.ps = 15    # Points d'endurance du perso
+        self.vie = 14    # Points de vie du perso
+        self.sta = 14    # Points d'endurance du perso
         self.de = 5     # Points de défence du perso
     
     def get_nom(self):
         return self.nom
     
-    def get_pv(self):
-        return self.pv
+    def get_vie(self):
+        return self.vie
     
-    def get_ps(self):
-        return self.ps
-
-    def get_de(self):
-        return self.de
+    def get_sta(self):
+        return self.sta
     
     def en_vie(self):
-        return self.pv > 0
+        return self.vie > 0
 
     def prends_degats(self, atk):
-        self.pv -= atk
+        self.vie -= atk
     
     def soigne(self, soin):
-        self.pv += soin
+        self.vie += soin
 
 
 if __name__ == "__main__":
     test = Perso("test")
     assert test.get_nom() == "test"
-    assert test.get_pv() == 15
-    assert test.get_pv() == 15
+    assert test.get_vie() == 14
+    assert test.get_vie() == 14
     assert test.en_vie() == True
     test.prends_degats(2)
-    assert test.get_pv() == 13
+    assert test.get_vie() == 12
     test.soigne(2)
-    assert test.get_pv() == 15
+    assert test.get_vie() == 14
