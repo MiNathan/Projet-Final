@@ -1,3 +1,6 @@
 from HUD import HUD as H
 
-H.hud()
+vie = 0
+sta = 0
+
+H.hud(vie, sta)
