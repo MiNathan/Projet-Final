@@ -11,7 +11,6 @@ class Perso:
         self.nom = nom  # Nom du perso
         self.vie = 14    # Points de vie du perso
         self.sta = 14    # Points d'endurance du perso
-        self.de = 5     # Points de défence du perso
     
     def get_nom(self):
         return self.nom
