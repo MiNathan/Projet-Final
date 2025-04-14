@@ -1,6 +1,6 @@
 import pyxel
 
-class hud:
+class HUD:
     def __init__(self, vie, sta):
         pyxel.init(256, 128, title ="Classe HUD", fps= 60)
         pyxel.load('hud.pyxres')
@@ -37,10 +37,18 @@ class hud:
         pyxel.line(216, 0, 216, 127, 0)
         pyxel.line(255, 0, 255, 127, 0)
 
+    def changement_vie(self, num):
+        if self.vie < 14:
+            self.vie += num
+
+    def changement_sta(self, num):
+        if self.sta < 14:
+            self.sta += num
+
     def update(self):
-        if pyxel.frame_count < 140 and pyxel.frame_count % 10 == 0:
-            self.vie += 1
-            self.sta += 1
+        if pyxel.frame_count % 2 == 0:
+            self.changement_vie(1)
+            self.changement_sta(1)
 
     def draw(self):
         pyxel.cls(1)
