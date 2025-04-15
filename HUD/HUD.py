@@ -36,7 +36,6 @@ class HUD:
         self.draw_vie(self.vie)
         self.draw_sta(self.sta)
         self.contours()
-        pyxel.rect(41, 1, 175, 126, 3)
 
     def changement_vie(self, num):
         if self.vie < 14:
