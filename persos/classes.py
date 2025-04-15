@@ -1,3 +1,5 @@
+import pyxel
+
 class Perso:
     """
     Classe representant un personnage joueur
@@ -7,11 +9,14 @@ class Perso:
         Se battre avec des ennemis
         Faire du troc avec des PNJ type marchand, villageois...
     """
-    def __init__(self, nom):
+    def __init__(self, nom, vie, sta):
         self.nom = nom  # Nom du perso
-        self.vie = 14    # Points de vie du perso
-        self.sta = 14    # Points d'endurance du perso
+        self.vie = vie    # Points de vie du perso
+        self.sta = sta    # Points d'endurance du perso
     
+    def draw_perso(self):
+        pyxel.blt(128, 64, 1, 0, 0, 8, 8, 7)
+
     def get_nom(self):
         return self.nom
     
@@ -32,7 +37,7 @@ class Perso:
 
 
 if __name__ == "__main__":
-    test = Perso("test")
+    test = Perso("test", 14, 14)
     assert test.get_nom() == "test"
     assert test.get_vie() == 14
     assert test.get_vie() == 14
