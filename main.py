@@ -1,29 +1,24 @@
 import pyxel
-from HUD import HUD as H
+from UI import UI as H
 from persos import classes as P
 
 
 
 class main:
-    def __init__(self, HUD, mc):
-        pyxel.init(256, 128, title ="Dark Dungeon", fps= 60)
+    def __init__(self):
+        pyxel.init(256, 129, title ="Dark Dungeon", fps= 60)
         pyxel.load('Ressources.pyxres')
 
-        self.hud = HUD
-        self.joueur = mc
+        self.ui = H.UI(14, 14)
+        self.joueur = P.Perso('Joueur', 14, 14)
         
         pyxel.run(self.update, self.draw)
     
     def update(self):
-        pass
+        self.joueur.act()
     
     def draw(self):
-        self.hud.draw_HUD()
+        self.ui.draw_UI()
         self.joueur.draw_perso()
 
-vie = 0
-sta = 0
-HUD = H.HUD(vie, sta)
-mc = P.Perso('Joueur', 14, 14)
-
-jeu = main(HUD, mc)
+jeu = main()
