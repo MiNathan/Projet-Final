@@ -13,10 +13,28 @@ class Perso:
         self.nom = nom  # Nom du perso
         self.vie = vie    # Points de vie du perso
         self.sta = sta    # Points d'endurance du perso
-    
-    def draw_perso(self):
-        pyxel.blt(128, 64, 1, 0, 0, 8, 8, 7)
+        self.x = 112
+        self.y = 56
 
+    def draw_perso(self):
+        pyxel.blt(self.x, self.y, 1, 0, 0, 8, 8, 7)
+
+    def deplacement(self, axe, inc):
+        if axe == 'x':
+            self.x += inc
+        if axe == 'y':
+            self.y += inc
+
+    def act(self):
+        if pyxel.btnp(pyxel.KEY_Z) and self.y >= 8:
+            return self.deplacement('y', -8)
+        if pyxel.btnp(pyxel.KEY_Q) and self.x >= 48:
+            return self.deplacement('x', -8)
+        if pyxel.btnp(pyxel.KEY_S) and self.y <= 119:
+            return self.deplacement('y', 8)
+        if pyxel.btnp(pyxel.KEY_D) and self.x <= 207:
+            return self.deplacement('x', 8)
+    
     def get_nom(self):
         return self.nom
     
