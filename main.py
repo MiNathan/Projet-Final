@@ -5,6 +5,10 @@ from persos import classes as P
 
 
 class main:
+    """
+    Classe pyxel principale pour la fenêtre graphique
+    Regroupe les autres fichiers de code
+    """
     def __init__(self):
         pyxel.init(256, 129, title ="Dark Dungeon", fps= 60)
         pyxel.load('Ressources.pyxres')
@@ -16,9 +20,11 @@ class main:
     
     def update(self):
         self.joueur.act()
+        self.ui.debug()
     
     def draw(self):
         self.ui.draw_UI()
+        print(self.ui.vie, self.ui.sta)
         self.joueur.draw_perso()
 
-jeu = main()
+main()
