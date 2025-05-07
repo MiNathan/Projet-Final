@@ -1,6 +1,6 @@
 import pyxel
-from UI import UI as H
-from persos import classes as P
+import UI as U
+import classes as P
 
 
 
@@ -13,7 +13,7 @@ class main:
         pyxel.init(256, 129, title ="Dark Dungeon", fps= 60)
         pyxel.load('Ressources.pyxres')
 
-        self.ui = H.UI(14, 14)
+        self.ui = U.UI(14, 14)
         self.joueur = P.Perso('Joueur', 14, 14)
         
         pyxel.run(self.update, self.draw)
@@ -24,7 +24,6 @@ class main:
     
     def draw(self):
         self.ui.draw_UI()
-        print(self.ui.vie, self.ui.sta)
         self.joueur.draw_perso()
 
 main()
